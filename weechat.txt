@@ -1,0 +1,27 @@
+I am using a Solarized light configuration for my cygwin/mintty client. Here is the configuration for weechat that I ended up to tolerate this light setup.
+
+buflist.format.hotlist_low                        string   "${color:green}"
+buflist.format.hotlist_private                    string   "${color:magenta}"
+buflist.format.hotlist_separator                  string   "${color:magenta}"
+fset.color.title_sort                             color    magenta
+weechat.color.chat_buffer                         color    magenta
+weechat.color.chat_inactive_buffer                color    magenta
+weechat.color.chat_prefix_buffer_inactive_buffer  color    magenta
+weechat.color.separator                           color    default
+weechat.color.status_number                       color    white
+weechat.color.status_time                         color    white
+weechat.look.color_real_white                     boolean  on
+
+Additional things set
+
+irc.server.pdt.autojoin
+irc.server.pdt.nicks
+
+Cheat sheet:
+  - https://devhints.io/weechat
+  - https://weechat.org/files/doc/stable/weechat_quickstart.en.html
+
+IRC beginner info
+  - http://www.ircbeginner.com/ircinfo/ircc-commands.html
+
+

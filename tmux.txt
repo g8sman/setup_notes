@@ -1,0 +1,40 @@
+Sessions
+
+      New session: tmux new -s <name>
+Attach to session: tmux a -t <name>
+     Kill session: tmux kill-session -t <name>
+
+Once in a session
+
+           prefix: ctrl+b
+
+  Switch Panes
+
+show pane number: PREFIX-q
+switch pane: 
+    PREFIXq, number
+    PREFIX<Up> # move cursor to the pane above
+    PREFIX<Down>
+    PREFIX<Left>
+    PREFIX<Right>
+
+Copy Mode
+
+    PREFIX[ then use Down/Up or PageDown/PageUp
+
+Cheat Sheets:
+  - https://gist.github.com/Starefossen/5955406
+  - https://kapeli.com/cheat_sheets/tmux.docset/Contents/Resources/Documents/index
+
+How to setup default sessions
+
+  - https://stackoverflow.com/questions/5609192/how-to-set-up-tmux-so-that-it-starts-up-with-specified-windows-opened
+
+  Example:
+
+  tmux new-session -s recipes \; split-window -v -p 30 \; split-window -h -p 40 \; send-keys 'top' C-m \; select-pane -t 1 \; send-keys 'weechat' C-m \; select-pane -t 0 \; split-window -h -p 40 \; send-keys 'watch -n \'docker ps --format "table {{.Names}}\t{{.Status}}\t{{.CreatedAt}}\t{{.Size}}"\'' C-m \;
+
+
+Other helpful reads
+  - scrollback buffer (https://medium.freecodecamp.org/tmux-in-practice-scrollback-buffer-47d5ffa71c93)
+
