@@ -38,3 +38,6 @@ tmux new-session -s dev \; split-window -v -p 30 \; split-window -h -p 40 \; sen
 Other helpful reads
   - scrollback buffer (https://medium.freecodecamp.org/tmux-in-practice-scrollback-buffer-47d5ffa71c93)
 
+
+Adding Git 2.* to a CentOS image
+http://www.karan.org/blog/2017/08/31/git-2-on-centos-linux-7/
