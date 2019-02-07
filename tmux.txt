@@ -32,7 +32,7 @@ How to setup default sessions
 
   Example:
 
-  tmux new-session -s recipes \; split-window -v -p 30 \; split-window -h -p 40 \; send-keys 'top' C-m \; select-pane -t 1 \; send-keys 'weechat' C-m \; select-pane -t 0 \; split-window -h -p 40 \; send-keys 'watch -n \'docker ps --format "table {{.Names}}\t{{.Status}}\t{{.CreatedAt}}\t{{.Size}}"\'' C-m \;
+tmux new-session -s dev \; split-window -v -p 30 \; split-window -h -p 40 \; send-keys 'top' C-m \; select-pane -t 1 \; send-keys 'echo cat' C-m \; select-pane -t 0 \; split-window -h -p 40 \; send-keys "watch -n 2 'docker ps --format \"table {{.Names}}\t{{.Status}}\t{{.CreatedAt}}\t{{.Size}}\"'" C-m \; split-window -v -p 40 \; send-keys "watch -n 2 'docker images --format \"table {{.Repository}}\t{{.Tag}}\t{{.CreatedSince}}\t{{.Size}}\" --filter=reference=\"sas-viya*:latest\"'" C-m \;
 
 
 Other helpful reads
